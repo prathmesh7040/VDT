@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day Tanvi ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #ff9ecf, #ffffff);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* TOP MESSAGE */
+.top-message {
+    background: black;
+    color: pink;
+    padding: 30px 20px;
+}
+
+.top-message h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.top-message p {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+section {
+    padding: 50px 20px;
+}
+
+button {
+    background: black;
+    color: pink;
+    border: 2px solid pink;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: pink;
+    color: black;
+}
+
+/* Flip Cards */
+.flip-card {
+    background-color: transparent;
+    width: 220px;
+    height: 280px;
+    perspective: 1000px;
+    margin: 15px;
+    display: inline-block;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* FRONT & BACK COMMON */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden; /* Important to keep image inside box */
+}
+
+/* IMAGE FIX */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Makes image fit perfectly */
+    border-radius: 15px;
+}
+
+/* BACK SIDE */
+.flip-card-back {
+    background: black;
+    color: pink;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Countdown at End */
+.countdown-box {
+    background: black;
+    color: pink;
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 22px;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 💖 TOP MESSAGE -->
+<div class="top-message">
+    <h1>Happy Valentine’s Day My Love ❤️</h1>
+    <p>You are my today, tomorrow and forever 💕</p>
+</div>
+
+<!-- 🎵 MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="C:\Users\HP\OneDrive\Desktop\vd\dooron_dooron.mp3" type="audio/mpeg">
+</audio>
+
+<section>
+    <button onclick="playMusic()">Click Here & Feel My Love 🎵</button>
+</section>
+
+<!-- 💍 PROPOSAL GAME -->
+<section>
+    <h2>Will You Be Mine Forever? 💍</h2>
+    <button onclick="yesAnswer()">YES ❤️</button>
+    <button id="noBtn" onmouseover="moveNo()">NO 😈</button>
+    <p id="proposalResult"></p>
+</section>
+
+
+
+<!-- 📸 PHOTO SECTION (MORE PHOTOS ADDED) -->
+<section>
+    <h2>Our Beautiful Memories 📸</h2>
+
+    <!-- Add as many photos as you want -->
+    
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="WhatsApp Image 2026-02-13 at 23.54.57.jpeg">
+            </div>
+            <div class="flip-card-back">
+                I may not be perfect,
+But my love for you is pure.
+In your one smile,
+I find my whole world.
+
+On this Valentine's Day, I ask softly —
+Will you bloom as the rose
+In my life forever?
+
+— Prathamesh 🌹
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="WhatsApp Image 2026-02-13 at 23.54.56.jpeg">
+            </div>
+            <div class="flip-card-back">
+                Slowly, I am becoming yours.
+Even distance cannot separate
+What my heart feels.
+
+Every breath whispers your name —
+For me, you are
+The queen of my heart.
+
+— Prathamesh 💞
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="WhatsApp Image 2026-02-13 at 23.54.56 (1).jpeg">
+            </div>
+            <div class="flip-card-back">
+                Mother says I’ve changed…
+And she’s right.
+
+How do I tell her
+That Lakshmi has entered my life —
+And her name is you?
+
+— Prathamesh ✨
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="1.jpeg">
+            </div>
+            <div class="flip-card-back">
+                Just one loving glance from you,
+And I am yours forever.
+
+Hold my hand,
+Not just for this life —
+But for all lifetimes to come.
+
+— Prathamesh ❤️
+            </div>
+        </div>
+    </div>
+<br><br>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="2.jpeg">
+            </div>
+            <div class="flip-card-back">
+                I was just a name in the crowd,
+Until you made me someone special.
+
+Hold my hand,
+And let’s write a story
+Where love is endless
+And we are forever.
+
+— Prathamesh ❤️
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="3.jpeg">
+            </div>
+            <div class="flip-card-back">
+                If you become my Rakhumai,
+I will be your Pandurang —
+Standing beside you,
+Lifetime after lifetime.
+
+No temple feels sacred without you,
+Because my true Pandharpur
+Is wherever you are.
+
+— Prathamesh ✨
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="4.jpeg">
+            </div>
+            <div class="flip-card-back">
+                Miles may stand between us,
+But my heart knows no distance.
+
+You live in my thoughts,
+In my dreams,
+In every silent heartbeat.
+
+Far from my sight,
+But never from my soul.
+
+— Prathamesh 💞
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="5.jpeg">
+            </div>
+            <div class="flip-card-back">
+                I don’t ask for stars,
+I don’t ask for the moon —
+Just your smile once a day
+Is enough to light my world.
+
+If loving you is a prayer,
+Then I wish to pray forever.
+
+— Prathamesh 🌹
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- 🎂 BIRTHDAY COUNTDOWN (NOW AT END) -->
+<section>
+    <h2>Countdown 🎂 (11 June)</h2>
+    <div class="countdown-box" id="countdown">Loading...</div>
+</section>
+
+<footer>
+     ❤️ | Tanvi & Prathamesh | ❤️
+</footer>
+
+<script>
+
+/* Floating Hearts */
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 500);
+
+/* Music */
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+
+/* Proposal */
+function moveNo() {
+    const btn = document.getElementById("noBtn");
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * 80 + "vw";
+    btn.style.top = Math.random() * 80 + "vh";
+}
+
+function yesAnswer() {
+    document.getElementById("proposalResult").innerHTML =
+        "You just made me the happiest person alive 😭❤️";
+}
+
+
+
+/* Birthday Countdown */
+function updateCountdown() {
+    const now = new Date();
+    let year = now.getFullYear();
+    let birthday = new Date(year, 5, 11);
+
+    if (now > birthday) {
+        birthday = new Date(year + 1, 5, 11);
+    }
+
+    const diff = birthday - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+        days + " Days 💕 " + hours + " Hours 💖 " +
+        minutes + " Minutes 💗 " + seconds + " Seconds";
+
+    if (diff <= 0) {
+        document.getElementById("countdown").innerHTML =
+            "🎉 HAPPY BIRTHDAY MY LOVE 🎂👑❤️";
+    }
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+</script>
+
+</body>
+</html>
